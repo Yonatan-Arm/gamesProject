@@ -21,8 +21,6 @@ const options = {
 
 
 
-
-
 async function loadGames(){
     const res =  await axios.request(options)
  try{
@@ -34,7 +32,7 @@ async function loadGames(){
 }
 
 
- async function query(entityType, delay = 300) {
+ async function query(delay = 300) {
     var entities = JSON.parse(localStorage.getItem('items_games')) || []
     if(!entities.length ) entities = await loadGames()
     _save('items_games', entities) 
@@ -45,9 +43,10 @@ async function loadGames(){
     })
 }
 
-async function get(entityType, entityId) {
-    const items = await query(entityType)
-    return items.find(entity => entity._id === entityId)
+
+async function get(id) {
+    const items = await query()
+    return items.find(item => item.id.toString() === id) 
 }
 
 async function post(entityType, newEntity) {
