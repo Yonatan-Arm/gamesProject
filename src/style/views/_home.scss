@@ -1,0 +1,42 @@
+.home {
+
+    h1 {
+      color: $teal-800;
+      font-family: 'Playfair-Regular';
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+}
+
+// .home {
+//   @include for-lg-layout {
+  // display: flex
+//   }
+// }
+
+// @mixin for-sm-layout {
+//   @media (min-width: $small) {
+//     @content;
+//   }
+// }
+
+// @mixin for-md-layout {
+//   @media (min-width: $medium) {
+//     @content;
+//   }
+// }
+
+// @mixin for-lg-layout {
+//   @media (min-width: $large) {
+//     @content;
+//   }
+// }
+
+// @mixin for-xl-layout {
+//   @media (min-width: $x-large) {
+//     @content;
+//   }
+// }
