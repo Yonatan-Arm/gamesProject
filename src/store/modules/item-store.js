@@ -3,7 +3,9 @@ import { itemService } from '../../services/item-service-fullback.js'
 export default {
     state: {
         items: [],
-        filterBy:{},
+        filterBy:{
+            name:'',
+        },
     },
     getters: {
 
@@ -25,9 +27,8 @@ export default {
 
     actions: {
         async loadItems({context,commit, state}) {
-            let items = await  itemService.query(state.filterBy)
-            items = items.splice(0,50)
             try{
+                const items = await  itemService.query(state.filterBy)
                 commit({ type: 'setItems', items })
                 return items
             } catch(err){

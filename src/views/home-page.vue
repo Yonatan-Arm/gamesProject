@@ -1,6 +1,7 @@
 <template>
   <main class="home-page">
     <h1>Games-List</h1>
+  <game-filter @filter="setFilter"> </game-filter>
     <list :items="items"  v-if="items" />
       <span v-else> loading...</span>
   </main>
@@ -8,23 +9,34 @@
 <script>
 
 import List from "../components/list.vue";
+import gameFilter from '../components/game-filter.vue'
+import GameFilter from '../components/game-filter.vue'
 
 export default {
   name: "home-page",
 data(){
   return {
-    items: null,
 
   }
 },
-async created(){
-  this.items =await this.$store.dispatch({ type: "loadItems"});
+ created(){
+
 },
-  methods: {},
+  methods: {
+    setFilter(filterBy){
+        this.$store.dispatch({ type: 'setFilter', filterBy})
+    }
+  },
   computed: {
+     items(){
+        return this.$store.getters.getItems
+
+    }
   },
   components: {
     List,
-  },
+    gameFilter,
+    GameFilter
+},
 };
 </script>

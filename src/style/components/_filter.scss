@@ -1,10 +1,23 @@
-select {
-  height: 36px;
-}
+
 
 .filter .form {
   @include for-lg-layout {
     display: flex;
     flex-direction: row;
   }
+}
+
+.filter{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 40vw;
+  height: rem(20px);
+  input{
+    border: none;
+    background-color: transparent;
+  }
+  input:focus{
+    background-color: #ffffffa1;
+  }
+
 }

@@ -1,7 +1,7 @@
 <template>
   <section class="filter">
     <label>
-    Search
+    Search:
     <input
     class="filter-input"
       v-model="filterBy.name"
@@ -9,6 +9,7 @@
       type="text"
       placeholder="Search.."
     />
+    </label>
   </section>
 </template>
 
@@ -25,7 +26,7 @@ export default {
   },
   methods: {
     setFilter() {
-      this.$emit("filter", JSON.parse(JSON.stringify(this.filterBy)));
+      this.$emit("filter", JSON.parse(JSON.stringify( this.filterBy)));
     },
   },
   components: {
