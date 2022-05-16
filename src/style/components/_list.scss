@@ -1,6 +1,6 @@
 .item-list{
     flex-wrap: wrap;
-    gap: 10px;
+    gap: rem(15px);
     align-items: center;
     justify-content: center;
 }
@@ -15,10 +15,18 @@
 .item-card{
     height:rem(380px);
     width: rem(200px);
-    border: 1px solid #222;
+    border: 2px solid #fff;
+    box-shadow:2px #fff;
     line-height: rem(25px);
+
     img{
         height: rem(150px);
+        object-fit: contain;
     }
     
+}
+.item-card:hover{
+    box-shadow: 2px 1px 6px 15px rgba(255,183,9,0.76);
+    cursor: pointer;
+
 }

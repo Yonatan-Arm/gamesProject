@@ -5,7 +5,6 @@
       <span v-else> loading...</span>
   </main>
 </template>
-
 <script>
 
 import List from "../components/list.vue";
