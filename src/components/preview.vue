@@ -1,12 +1,11 @@
 <template>
 <section>
-    <li class="flex-col">
-      <span> id: {{item.title}} </span>
-    <span> id: {{item.publisher}} </span>
-    <span> id: {{item.id}} </span>
-    <span> id: {{item.short_description}} </span>
-    <span> id: {{item.genre}} </span>
-    <img :src="item.thumbnail" alt="pic-game" >
+    <li class=" item-card flex-col ">
+      <img :src="item.thumbnail" alt="pic-game" >
+      <span> title: {{item.title}} </span>
+    <span> publisher: {{item.publisher}} </span>
+    <span> description: {{item.short_description}} </span>
+    <span> genre: {{item.genre}} </span>
   </li>
 
 </section>

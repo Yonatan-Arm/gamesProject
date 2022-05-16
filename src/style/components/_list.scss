@@ -1,3 +1,24 @@
 .item-list{
     flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.home-page{
+    h1{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.item-card{
+    height:rem(380px);
+    width: rem(200px);
+    border: 1px solid #222;
+    line-height: rem(25px);
+    img{
+        height: rem(150px);
+    }
+    
 }

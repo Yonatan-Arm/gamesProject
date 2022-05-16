@@ -1,6 +1,6 @@
 <template>
   <main class="home-page">
-    <h1>home-page</h1>
+    <h1>Games-List</h1>
     <list :items="items"  v-if="items" />
       <span v-else> loading...</span>
   </main>
